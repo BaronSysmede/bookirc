@@ -40,17 +40,19 @@ function createWindow(): void {
     return { action: 'deny' }
   })
 
-  // CSP
-  mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
-    callback({
-      responseHeaders: {
-        ...details.responseHeaders,
-        'Content-Security-Policy': [
-          "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://sunxdcc.com https://ixirc.com https://api4.my-ip.io"
-        ]
-      }
+  // CSP — only enforce in production; dev needs unsafe-inline for Vite HMR
+  if (!isDev) {
+    mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
+      callback({
+        responseHeaders: {
+          ...details.responseHeaders,
+          'Content-Security-Policy': [
+            "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://sunxdcc.com https://ixirc.com https://api4.my-ip.io"
+          ]
+        }
+      })
     })
-  })
+  }
 
   if (isDev && process.env['ELECTRON_RENDERER_URL']) {
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
