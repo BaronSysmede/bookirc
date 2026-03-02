@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0d0d0f;
+  color: #e4e4e7;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #16161a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2e36;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3e46;
+}
+
+/* mIRC color classes */
+.irc-bold { font-weight: bold; }
+.irc-italic { font-style: italic; }
+.irc-underline { text-decoration: underline; }
+.irc-strike { text-decoration: line-through; }
+.irc-fg-0 { color: #ffffff; }
+.irc-fg-1 { color: #000000; }
+.irc-fg-2 { color: #00007f; }
+.irc-fg-3 { color: #009300; }
+.irc-fg-4 { color: #ff0000; }
+.irc-fg-5 { color: #7f0000; }
+.irc-fg-6 { color: #9c009c; }
+.irc-fg-7 { color: #fc7f00; }
+.irc-fg-8 { color: #ffff00; }
+.irc-fg-9 { color: #00fc00; }
+.irc-fg-10 { color: #009393; }
+.irc-fg-11 { color: #00ffff; }
+.irc-fg-12 { color: #0000fc; }
+.irc-fg-13 { color: #ff00ff; }
+.irc-fg-14 { color: #7f7f7f; }
+.irc-fg-15 { color: #d2d2d2; }
+.irc-bg-0 { background-color: #ffffff; }
+.irc-bg-1 { background-color: #000000; }
+.irc-bg-2 { background-color: #00007f; }
+.irc-bg-3 { background-color: #009300; }
+.irc-bg-4 { background-color: #ff0000; }
+.irc-bg-5 { background-color: #7f0000; }
+.irc-bg-6 { background-color: #9c009c; }
+.irc-bg-7 { background-color: #fc7f00; }
+.irc-bg-8 { background-color: #ffff00; }
+.irc-bg-9 { background-color: #00fc00; }
+.irc-bg-10 { background-color: #009393; }
+.irc-bg-11 { background-color: #00ffff; }
+.irc-bg-12 { background-color: #0000fc; }
+.irc-bg-13 { background-color: #ff00ff; }
+.irc-bg-14 { background-color: #7f7f7f; }
+.irc-bg-15 { background-color: #d2d2d2; }

@@ -1,0 +1,23 @@
+appId: com.bookirc.app
+productName: BookIRC
+directories:
+  buildResources: resources
+  output: dist
+files:
+  - out/**/*
+  - node_modules/**/*
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Network
+mac:
+  target:
+    - dmg
+  category: public.app-category.utilities
+win:
+  target:
+    - nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
