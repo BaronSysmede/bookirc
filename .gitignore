@@ -3,3 +3,8 @@ dist/
 out/
 .DS_Store
 *.log
+
+# Gas Town (added by gt)
+.runtime/
+.claude/commands/
+.logs/
