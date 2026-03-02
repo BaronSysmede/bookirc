@@ -24,6 +24,10 @@ export default function App(): React.ReactElement {
   const addServer = useServerStore((s) => s.addServer)
 
   useEffect(() => {
+    if (!window.bookirc) {
+      console.error('[bookirc] window.bookirc is undefined — preload did not load')
+      return
+    }
     const removeIrc = window.bookirc.onIrcEvent((e) => {
       if (e.type === 'message' || e.type === 'notice' || e.type === 'privmsg') {
         addMessage(e.serverId, (e.target as string) || e.serverId, {
