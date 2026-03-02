@@ -19,7 +19,7 @@
     "@tanstack/react-table": "^8.20.5",
     "@tanstack/react-virtual": "^3.10.9",
     "crc-32": "^1.2.2",
-    "electron-store": "^10.0.0",
+    "electron-store": "^8.2.0",
     "irc-framework": "^4.14.0",
     "zustand": "^5.0.2"
   },
