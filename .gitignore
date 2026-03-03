@@ -8,3 +8,9 @@ out/
 .runtime/
 .claude/commands/
 .logs/
+
+# Beads - local Dolt storage (runtime state)
+.beads/
+
+# Beads storage (local runtime state)
+.beads/
